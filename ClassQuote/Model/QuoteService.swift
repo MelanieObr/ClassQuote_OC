@@ -16,6 +16,15 @@ class QuoteService {
     private static let pictureUrl = URL(string: "https://source.unsplash.com/random/1000x1000")!
     private var task: URLSessionDataTask?
     
+    // injections de dépendance
+    private var quoteSession = URLSession(configuration: .default)
+    private var imageSession = URLSession(configuration: .default)
+    
+    init(quoteSession: URLSession, imageSession: URLSession) {
+        self.quoteSession = quoteSession
+        self.imageSession = imageSession
+    }
+    
     func getQuote(callback: @escaping (Bool, Quote?) -> Void) {
         // URL, method, parameters
         var request = URLRequest(url: QuoteService.quoteUrl)
@@ -23,10 +32,10 @@ class QuoteService {
         
         let body = "method=getQuote&format=json&lang=en"
         request.httpBody = body.data(using: .utf8)
-        let session = URLSession(configuration: .default)
+        
         
         task?.cancel()
-        task = session.dataTask(with: request) { (data, response, error) in
+        task = quoteSession.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     callback(false, nil)
@@ -56,9 +65,9 @@ class QuoteService {
     }
     
     func getImage(completionHandler: @escaping (Data?) -> Void) {
-        let session = URLSession(configuration: .default)
+        
         task?.cancel()
-        task = session.dataTask(with: QuoteService.pictureUrl) { (data, response, error) in
+        task = imageSession.dataTask(with: QuoteService.pictureUrl) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     completionHandler(nil)

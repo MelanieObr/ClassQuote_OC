@@ -16,6 +16,9 @@
 		B849CA8B2314339800A84657 /* ClassQuoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B849CA8A2314339800A84657 /* ClassQuoteUITests.swift */; };
 		B849CA9D2314408900A84657 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B849CA9C2314408900A84657 /* QuoteService.swift */; };
 		B849CA9F2314884000A84657 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B849CA9E2314884000A84657 /* Quote.swift */; };
+		B87A51B2233CE89300C02AB6 /* Quote.json in Resources */ = {isa = PBXBuildFile; fileRef = B87A51B1233CE89300C02AB6 /* Quote.json */; };
+		B87A51B4233CE92800C02AB6 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A51B3233CE92800C02AB6 /* FakeResponseData.swift */; };
+		B87A51B8233D36F700C02AB6 /* UrlSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87A51B7233D36F700C02AB6 /* UrlSessionFake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		B849CA8C2314339800A84657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B849CA9C2314408900A84657 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
 		B849CA9E2314884000A84657 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		B87A51B1233CE89300C02AB6 /* Quote.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quote.json; sourceTree = "<group>"; };
+		B87A51B3233CE92800C02AB6 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		B87A51B7233D36F700C02AB6 /* UrlSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionFake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 			children = (
 				B849CA7F2314339800A84657 /* ClassQuoteTests.swift */,
 				B849CA812314339800A84657 /* Info.plist */,
+				B87A51B1233CE89300C02AB6 /* Quote.json */,
+				B87A51B3233CE92800C02AB6 /* FakeResponseData.swift */,
+				B87A51B7233D36F700C02AB6 /* UrlSessionFake.swift */,
 			);
 			path = ClassQuoteTests;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87A51B2233CE89300C02AB6 /* Quote.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87A51B8233D36F700C02AB6 /* UrlSessionFake.swift in Sources */,
 				B849CA802314339800A84657 /* ClassQuoteTests.swift in Sources */,
+				B87A51B4233CE92800C02AB6 /* FakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
